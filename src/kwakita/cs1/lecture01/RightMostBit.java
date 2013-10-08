@@ -10,9 +10,8 @@ public class RightMostBit {
    * @return 最右ビットの位置
    */
   public long rightMostBit1(long bits) {
-    for (long bit = 1; bit > 0; bit <<= 1)
-      if ((bits & bit) == 0)
-        return bit;
+    for (long bit = 1; bit > 0; bit = bit<<1)
+      if ((bits & bit) == 0) return bit;
     return 0L;
   }
 
