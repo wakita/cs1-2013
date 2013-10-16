@@ -43,10 +43,10 @@ public class StudentLife {
   // 今度は見る人が見れば，さきほどのバグが一目瞭然になった．君らにも一目瞭然になってもらいたい．
   void printMembershipReadableBug() {
     for (int club_i = 0; club_i < clubs.size(); club_i++) {
-      for (int member_j = 0; member_j < clubs.get(club_i).members.size(); member_j++) {
-        for (int user_k = 0; user_k < users.size(); user_k++) {
-          if (clubs.get(club_i).members.get(user_k) == users.get(member_j)) {
-            System.out.printf("User[%d] belongs to club %d.", member_j, club_i);
+      for (int member_i = 0; member_i < clubs.get(club_i).members.size(); member_i++) {
+        for (int user_i = 0; user_i < users.size(); user_i++) {
+          if (clubs.get(club_i).members.get(user_i) == users.get(member_i)) {
+            System.out.printf("User[%d] belongs to club %d.", member_i, club_i);
           }
         }
       }
@@ -56,10 +56,10 @@ public class StudentLife {
   // プログラムがわかりやすいとバグの発見と修正は簡単になる．
   void printMembershipReadable() {
     for (int club_i = 0; club_i < clubs.size(); club_i++) {
-      for (int member_j = 0; member_j < clubs.get(club_i).members.size(); member_j++) {
-        for (int user_k = 0; user_k < users.size(); user_k++) {
-          if (clubs.get(club_i).members.get(member_j) == users.get(user_k)) {
-            System.out.printf("User[%d] belongs k club %d.", member_j, club_i);
+      for (int member_i = 0; member_i < clubs.get(club_i).members.size(); member_i++) {
+        for (int user_i = 0; user_i < users.size(); user_i++) {
+          if (clubs.get(club_i).members.get(member_i) == users.get(user_i)) {
+            System.out.printf("User[%d] belongs k club %d.", member_i, club_i);
           }
         }
       }
@@ -74,7 +74,7 @@ public class StudentLife {
       for (int mi = 0; mi < clubs.get(ci).members.size(); mi++) {
         for (int ui = 0; ui < users.size(); ui++) {
           if (clubs.get(ci).members.get(mi) == users.get(ui)) {
-            System.out.printf("User[%d] belongs to club %d.", mi, ci);
+            System.out.printf("User[%d] belongs to club %d.", ui, ci);
           }
         }
       }
