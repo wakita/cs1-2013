@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 public class Lecture03 {
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({ "unused", "unchecked" })
   void run() {
     double e = Math.E, pi = Math.PI;
 
@@ -21,6 +21,7 @@ public class Lecture03 {
 
     // Generics を用いない場合，Javaのコンパイラは要素の型情報が得られない．
     // このため，危険性を含むコードへの検査が甘くなる．
+    @SuppressWarnings("rawtypes")
     List ints_old_fashioned = new ArrayList();
     ints_old_fashioned.add("hello");
     ints_old_fashioned.add(0);
